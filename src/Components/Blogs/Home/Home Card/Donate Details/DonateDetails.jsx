@@ -19,6 +19,7 @@ const DonateDetails = () => {
   
     // console.log(donation)
        const {image, title, description, text_color: button_color,price}=donation;
+       
 
        const handleAddToDonation=()=>{
        
