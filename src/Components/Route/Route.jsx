@@ -5,10 +5,9 @@ const Route = () => {
     return (
         <div>
              <Navbar></Navbar>
-          <div className="w-[90%] mx-auto">
-         
-
-            <Outlet></Outlet>
+             
+          <div>
+           <Outlet></Outlet>
           </div>
         </div>
     );

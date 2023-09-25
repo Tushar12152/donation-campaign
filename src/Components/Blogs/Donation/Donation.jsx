@@ -20,7 +20,7 @@ const Donation = () => {
     // console.log(empty)
     // console.log(donates)
     return (
-        <div>
+        <div className="w-[90%] mx-auto">
              {
                 empty?<p className="text-center font-bold text-4xl mt-10 text-violet-900 lg:mt-20">{empty}</p>
                 :
@@ -46,3 +46,8 @@ const Donation = () => {
 };
 
 export default Donation;
+
+
+
+
+

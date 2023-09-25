@@ -54,7 +54,7 @@ const DonateDetails = () => {
 
     return (
       
-        <div className="mt-5 relative">
+        <div className="mt-5 relative w-[90%] mx-auto">
            
            <img className="w-[1120px] h-[400px] mx-auto" src={image}  />
             <h1 className="text-[#0B0B0B] text-4xl font-bold  pt-10 pl-10">{title}</h1>

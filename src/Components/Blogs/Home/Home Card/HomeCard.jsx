@@ -6,7 +6,7 @@ const HomeCard = ({donate}) => {
 
     // console.log(card_background_color)
     return (
-        <div>
+        <div >
             <Link to={`/donate/${id}`}>
             <div className='rounded-md' style={{ backgroundColor: card_background_color }}>
                   <img className='w-[312px] mx-auto py-1 h-[194px]' src={image} alt="" />

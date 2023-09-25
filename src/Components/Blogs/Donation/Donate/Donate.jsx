@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom';
 const Donate = ({donate}) => {
-    console.log(donate)
+    // console.log(donate)
     const {id,image, title, category,  price, card_background_color, category_background_color, text_color}=donate
     return (
-        <div className='mt-10'>
+        <div className='mt-10 '>
                <div className='rounded-md flex' style={{ backgroundColor: card_background_color }}>
                   <img className=' w-[220px] h-[200px]  py-1 ' src={image} alt="" />
 
