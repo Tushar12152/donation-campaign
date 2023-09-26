@@ -5,8 +5,8 @@ const Donate = ({donate}) => {
     const {id,image, title, category,  price, card_background_color, category_background_color, text_color}=donate
     return (
         <div className='mt-10 '>
-               <div className='rounded-md flex' style={{ backgroundColor: card_background_color }}>
-                  <img className=' w-[220px] h-[200px]  py-1 ' src={image} alt="" />
+               <div className='rounded-md flex flex-col lg:flex-row' style={{ backgroundColor: card_background_color }}>
+                  <img className=' w-[220px] h-[200px]  py-1 mx-auto lg:mx-0 ' src={image} alt="" />
 
                         <div className='ml-4 p-5'>
                         <h1  style={{color: text_color,backgroundColor: category_background_color}} className='w-20  p-1 rounded-lg' >{category}</h1>
