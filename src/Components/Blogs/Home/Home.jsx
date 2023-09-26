@@ -3,6 +3,7 @@ import  { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import HomeCard from "./Home Card/HomeCard";
 import Banner from "../../nav/Banner/Banner";
+import { Helmet } from "react-helmet-async";
 
 
 const Home = () => {
@@ -15,6 +16,11 @@ const Home = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>
+                     Home
+                </title>
+            </Helmet>
             <Banner donation={donates} onSearch={handleSearch} />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-24 w-[90%] mx-auto">
                 {

@@ -1,4 +1,5 @@
 
+import { Helmet } from 'react-helmet-async';
 import { useLoaderData } from 'react-router-dom';
 import { PieChart, Pie, Tooltip, Legend, Cell, Label } from 'recharts';
 
@@ -6,11 +7,11 @@ const Statistics = () => {
   const donation = JSON.parse(localStorage.getItem('donation'));
   const totalData = useLoaderData();
 
-  const COLORS = ['#00C49F','#FF444A']; // Define your fixed colors
+  const COLORS = ['#00C49F','#FF444A']; 
 
-//   const calculatePercentage = (value, total) => {
-//     return ((value / total) * 100).toFixed(2);
-//   };
+  // const calculatePercentage = (value, total) => {
+  //   return ((value / total) * 100).toFixed(2);
+  // };
 
   const yourDonations = donation ? donation.length : 0;
   const restDonations = totalData.length - yourDonations;
@@ -22,6 +23,10 @@ const Statistics = () => {
 
   return (
     <div className=' lg:ml-[500px]'>
+
+      <Helmet>
+             <title> Statistic</title>
+      </Helmet>
     
       <PieChart width={400} height={400}>
         <Pie
@@ -41,7 +46,7 @@ const Statistics = () => {
             <Label
               key={`label-${index}`}
               position="inside"
-              content={({ percent }) => `${(percent * 100).toFixed(2)}%`} // Adjusted label content
+              content={({ percent }) => `${(percent * 100).toFixed(2)}%`} 
               fill="#ffffff"
             />
           ))}
@@ -49,8 +54,23 @@ const Statistics = () => {
         <Tooltip formatter={(value) => `${value}%`} />
         <Legend />
       </PieChart>
+
     </div>
   );
 };
 
 export default Statistics;
+
+
+
+
+
+
+
+
+
+
+
+
+
+

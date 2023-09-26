@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Donate from "./Donate/Donate";
+import { Helmet } from "react-helmet-async";
 
 const Donation = () => {
      const [donates,setDonates]=useState([])
@@ -21,6 +22,11 @@ const Donation = () => {
     // console.log(donates)
     return (
         <div className="w-[90%] mx-auto">
+               <Helmet>
+                   <title>Donation</title>
+               </Helmet>
+
+
              {
                 empty?<p className="text-center font-bold text-4xl mt-10 text-violet-900 lg:mt-20">{empty}</p>
                 :
