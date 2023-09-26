@@ -3,7 +3,7 @@ import  { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import HomeCard from "./Home Card/HomeCard";
 import Banner from "../../nav/Banner/Banner";
-you 
+
 
 const Home = () => {
     const donates = useLoaderData();
