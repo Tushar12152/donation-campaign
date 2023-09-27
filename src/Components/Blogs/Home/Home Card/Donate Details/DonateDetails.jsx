@@ -59,7 +59,7 @@ const DonateDetails = () => {
            <img className="w-[1120px] h-[400px] mx-auto" src={image}  />
             <h1 className="text-[#0B0B0B] text-4xl font-bold  pt-10 pl-10">{title}</h1>
             <p className="pl-10 pt-1 text-[#0B0B0BB3] leading-6">{description}</p>
-           <div className="absolute top-80 rounded-lg bg-[#0B0B0B80] w-[1120px] mx-auto py-5   lg:ml-12">
+           <div className="absolute top-80 rounded-lg bg-[#0B0B0B80] w-full lg:w-[1120px] mx-auto py-5   lg:ml-12">
                  <button onClick={handleAddToDonation} className="py-2 px-4 ml-10 rounded-lg text-white" style={{ backgroundColor: button_color }}> Donate ${price}</button>
            </div>
         </div>
