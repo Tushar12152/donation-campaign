@@ -5,6 +5,9 @@ import Donation from "../Components/Blogs/Donation/Donation";
 import Statistics from "../Components/Blogs/Statistics/Statistics";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import DonateDetails from "../Components/Blogs/Home/Home Card/Donate Details/DonateDetails";
+import Login from "../Components/Login/Login";
+import Register from "../Components/Register/Register";
+import Private from "../Private route/Private";
 
 const Router = createBrowserRouter([
     {
@@ -19,18 +22,28 @@ const Router = createBrowserRouter([
             },
             {
                 path:"/donate/:id",
-                element:<DonateDetails></DonateDetails>,
+                element:<Private>
+                    <DonateDetails></DonateDetails>
+                        </Private>,
                 loader:()=>fetch('/data.json')
             },
             {
                 path:"/donation",
-                element:<Donation></Donation>
+                element:<Private><Donation></Donation></Private>
 
             },
             {
                 path:"/statistics",
-                element:<Statistics></Statistics>,
+                element:<Private><Statistics></Statistics></Private>,
                 loader:()=>fetch('/data.json')
+            },
+            {
+                path:"/login",
+                element:<Login></Login>
+            },
+            {
+                path:'/register',
+                element:<Register></Register>
             }
         ]
     }
