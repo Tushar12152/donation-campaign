@@ -30,8 +30,8 @@ const Navbar = () => {
              </div>
            <div>
            { user?<div className="flex items-center justify-center gap-2"> 
-               <div className=" ">
-               <img className="" src={user?.photoURL} alt="" />
+               <div className="flex flex-row-reverse gap-4">
+               <img className="w-10 rounded-full bg-slate-600" src={user?.photoURL} alt="" />
                <p>{user.email}</p>
                </div>
                 

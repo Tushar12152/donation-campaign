@@ -3,13 +3,23 @@ import {AiFillEyeInvisible,AiFillEye} from 'react-icons/ai';
 import UseAuthCon from "../../Hooks/UseAuthCon";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { FcGoogle } from 'react-icons/fc';
 
 const Login = () => {
     const [showPassword,setShowPassword]=useState(true)
     
-     const {logIn}=UseAuthCon()
+     const {logIn,googleLogin}=UseAuthCon()
      const navigate=useNavigate()
 
+       const handleGoogleLogIn=(media)=>{
+        media()
+        .then(result=>{
+            console.log(result.user)
+        })
+        .catch(error=>{
+            console.log(error)
+        })
+       }
 
     const handleLogIn=e=>{
         e.preventDefault();
@@ -62,6 +72,13 @@ const Login = () => {
         </div>
 
       </form>
+      <div>
+           <p className="text-center border-b-4 p-4">sign up with</p>
+          <div  className="p-4" >
+          <button className="text-2xl" onClick={()=>handleGoogleLogIn(googleLogin)}><FcGoogle></FcGoogle></button>
+          </div>
+
+      </div>
       </div>
     </div>
   </div>
